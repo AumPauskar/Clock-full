@@ -1,2 +1,4 @@
-# Clock-full
-A nice clock with timer
+# Clock
+## Modules used
+- Tkinter
+- Time
