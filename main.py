@@ -19,7 +19,14 @@ canvas_stopwatch.pack()
 canvas_timer = Canvas(root)
 canvas_timer.pack()
 
-
+def RunClock():
+    hour = time.strftime('%H')
+    minute = time.strftime('%M')
+    second = time.strftime('%S')
+    label_time_hr.config(text = hour)
+    label_time_min.config(text = minute)
+    label_time_sec.config(text = second)
+    root.after(1000, RunClock)
 # --------------------
 # this section of code will handle the labels of the main clock part
 # the time will contain time in the form of 07:47:09
@@ -27,13 +34,13 @@ canvas_timer.pack()
 # this paragraph of code will contain the hours: part
 label_time_hr = Label(canvas_time, text = '')
 label_time_hr.grid(row = 1, column = 1)
-label_time_hr_dot = Label(label_time_hr, text = ':')
+label_time_hr_dot = Label(canvas_time, text = ':')
 label_time_hr_dot.grid(row = 1, column = 2)
 
 # this paragraph of code will contain the minutes: part
 label_time_min = Label(canvas_time, text = '')
 label_time_min.grid(row = 1, column = 3)
-label_time_min_dot = Label(label_time_min, text = ':')
+label_time_min_dot = Label(canvas_time, text = ':')
 label_time_min_dot.grid(row = 1, column = 4)
 
 # this paragraph of code will contain the seconds part
@@ -74,13 +81,15 @@ label_timer_hr_dot.grid(row = 1, column = 2)
 # this paragraph of code will contain the minutes part
 label_timer_min = Label(canvas_timer, text ='')
 label_timer_min.grid(row = 1, column = 3)
-label_time_min_dot = Label(canvas_timer, text = ':')
-label_time_min_dot.grid(row = 1, column = 4)
+label_timer_min_dot = Label(canvas_timer, text = ':')
+label_timer_min_dot.grid(row = 1, column = 4)
 
 # this paragraph of code will contain the seconds part
-label_time_sec = Label(canvas_timer, text = '')
-label_time_sec.grid(row = 1, column = 5)
+label_timer_sec = Label(canvas_timer, text = '')
+label_timer_sec.grid(row = 1, column = 5)
 # --------------------
 
+
+RunClock()
 # tkinter essential
 root.mainloop()
