@@ -73,7 +73,7 @@ label_time_min_dot = Label(canvas_timer, text = ':')
 label_time_min_dot.grid(row = 1, column = 4)
 
 # this paragraph of code will contain the seconds part
-label_time_sec = Label(canvas, text = '')
+label_time_sec = Label(canvas_timer, text = '')
 label_time_sec.grid(row = 1, column = 5)
 # --------------------
 
