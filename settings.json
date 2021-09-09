@@ -1,3 +1,11 @@
 {
-    "layout": "300x200"
+	"_comment-help": "Comments are made in this fashion here",
+
+	"_comment-layout": "layout gives the standard size of the code --> horizontal x vertical",
+	"layout": "300x200", 
+
+	"_comment-time": "These three values gives the time notations for the timer feel free to mess around",
+	"timer_hrs": "00",
+	"timer_min": "00",
+	"timer_sec": "45"
 }
