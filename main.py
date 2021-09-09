@@ -1,9 +1,14 @@
 # importing all the modules
 from tkinter import *
 import time
+import controller as co
+
+geometry_size = co.GiveLayout()
 
 # tkinter essential
 root = Tk()
+root.title('Clock')
+root.geometry(geometry_size)
 
 canvas_time = Canvas(root)
 canvas_time.pack()
