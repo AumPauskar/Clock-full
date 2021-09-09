@@ -4,6 +4,31 @@ def GiveLayout():
 		data = json.load(file)
 		return data['layout']
 
+def GiveMainClockFont():
+	import json
+	with open('settings.json', 'r') as file:
+		data = json.load(file)
+	word = data['font-clock-main']
+	temp = ''
+	for a in range(len(word)):
+		if a == 0 or a == len(word)-1:
+			pass
+		else:
+			temp += word[a]
+	return temp
+
+import json
+with open('settings.json', 'r') as file:
+	data = json.load(file)
+word = data['font-clock-main']
+temp = ''
+for a in range(len(word)):
+	if a == 0 or a == len(word)-1:
+		pass
+	else:
+		temp += word[a]
+print(temp)
+
 def Convert(hours, minutes, seconds):
 	# these two if statements are executed to convert the times in the correct form
 	# eg if seconds == 3600 then hour ==1 and minutes, seconds are reduced to 0

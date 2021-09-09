@@ -10,6 +10,8 @@ with open('settings.json', 'r') as val:
 timer = co.Convert(hours_timer, minutes_timer, seconds_timer)
 
 geometry_size = co.GiveLayout()
+font_clock_main = co.GiveMainClockFont()
+print(font_clock_main)
 
 # tkinter essential
 root = Tk()
@@ -70,19 +72,19 @@ def RunTimer():
 # the time will contain time in the form of 07:47:09
 # aka in hours:minutes:secoonds
 # this paragraph of code will contain the hours: part
-label_time_hr = Label(canvas_time, text = '')
+label_time_hr = Label(canvas_time, text = '', font = font_clock_main)
 label_time_hr.grid(row = 1, column = 1)
-label_time_hr_dot = Label(canvas_time, text = ':')
+label_time_hr_dot = Label(canvas_time, text = ':', font = font_clock_main)
 label_time_hr_dot.grid(row = 1, column = 2)
 
 # this paragraph of code will contain the minutes: part
-label_time_min = Label(canvas_time, text = '')
+label_time_min = Label(canvas_time, text = '', font = font_clock_main)
 label_time_min.grid(row = 1, column = 3)
-label_time_min_dot = Label(canvas_time, text = ':')
+label_time_min_dot = Label(canvas_time, text = ':', font = font_clock_main)
 label_time_min_dot.grid(row = 1, column = 4)
 
 # this paragraph of code will contain the seconds part
-label_time_sec = Label(canvas_time, text = '')
+label_time_sec = Label(canvas_time, text = '', font = font_clock_main)
 label_time_sec.grid(row = 1, column = 5)
 # --------------------
 

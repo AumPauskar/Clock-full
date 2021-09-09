@@ -4,6 +4,9 @@
 	"_comment-layout": "layout gives the standard size of the code --> horizontal x vertical",
 	"layout": "300x200", 
 
+	"_comment-fonts": "This bit of code will provide all the fonts required for the program",
+	"font-clock-main": "(Ariel, 16)",
+
 	"_comment-time": "These three values gives the time notations for the timer feel free to mess around",
 	"timer_hrs": "00",
 	"timer_min": "00",
