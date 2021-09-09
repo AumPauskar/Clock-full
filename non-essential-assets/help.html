@@ -1,3 +1,4 @@
+<!-- Help file for the user's aid -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,20 +6,53 @@
 	</head>
 	<body>
 
+		<!-- Body of the HTML file type-->
 		<h1>Coding help</h1>
 		<p>1.   When tkinter essential is mentioned it means only that the line of code is only used for tkinter and not
 			for anything else.</p>
 		<p>2.   Indentation are used in the form of TABS of length 4 not spaces</p>
 
-		<h2>Indentation</h2>
+		<h1>Indentation</h1>
 		<p>The indentation used in this project are to be only done with TABS NOT SPACES</p>
 
-		<h2>Layout</h2>
+		<h1>Layout</h1>
 		<p>The clock is divided into 3 parts. The first part is the main clock part. This part is only used for displaying time
 			in the form of a 24 hours hour clock. The second part is the stopwatch part which is used for displaying the 
 			stopwatch in the form of hours:minutes:seconds. The third part is the timer part, the current plan is to have a 
 			json file which decides how long timer will last.
-		<img src="plan.png" alt="Tentative layout">
+		</p>
+		<img src = "plan.png" alt = "Tentative layout">
+
+
+		<!-- Descriptive of all the file types-->
+		<h1>Why so many files???</h1>
+		<img src = "file_desc.png" alt = "Files">
+		<p>Now you might ask why so many files in the plan? Well to distribute the workload we have made a set of different
+			filetypes to accomadate different requirements.
+		</p>
+		<!--1. main.py-->
+		<h5>1.	main.py</h5>
+		<p>Firstly the elephant in the room is main.py, it controls 
+			all the major workloads of the program and has all the labels inside it. If you want to see the main core of the 
+			program you go to main.py
+		</p>
+		<!--2. controller.py-->
+		<h5>2.	controller.py</h5>
+		<p>Controller.py handles all the side functions of the file for example it handles the information that is 
+			passed from the json file to main.py
+		</p>
+		<!--3. settinggs.json-->
+		<h5>3.	settings.json</h5>
+		<p>settings.json will provide all the information for the main files in main. Mostly settings.json will
+			give the size and text information to the main file and the countdown timer values.
+		</p>
+		<!--4. README.md-->
+		<h5>4.	README.md</h5>
+		<p>Will provide a small gist of all the modules used and the basic functionality of the application</p>
+		<!--5. non-essential-assets-->
+		<h5>5.	non-essential-assets</h5>
+		<p>This folder will house all the non essential details regarding the application like help, logs and images 
+			which are not necessary to run the code properly
 		</p>
 	</body>
 </html>
