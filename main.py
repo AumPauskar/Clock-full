@@ -9,9 +9,10 @@ with open('settings.json', 'r') as val:
 	hours_timer = int(data['timer_hrs']); minutes_timer = int(data['timer_min']); seconds_timer = int(data['timer_sec'])
 timer = co.Convert(hours_timer, minutes_timer, seconds_timer)
 
+# would get the data from settings.json and controller.py
 geometry_size = co.GiveLayout()
 font_clock_main = co.GiveMainClockFont()
-print(font_clock_main)
+font_clock_timer = co.GiveTimerClockFont()
 
 # tkinter essential
 root = Tk()
@@ -113,19 +114,19 @@ label_stopwatch_sec.grid(row = 1, column = 5)
 # this part will contain the countdown-timer part
 # the time will be displayed in a hour:minute:second fashion
 # this paragraph of code will contain the hours part
-label_timer_hr = Label(canvas_timer, text ='')
+label_timer_hr = Label(canvas_timer, text ='', font = font_clock_timer)
 label_timer_hr.grid(row = 1, column = 1)
-label_timer_hr_dot = Label(canvas_timer, text = ':')
+label_timer_hr_dot = Label(canvas_timer, text = ':', font = font_clock_timer)
 label_timer_hr_dot.grid(row = 1, column = 2)
 
 # this paragraph of code will contain the minutes part
-label_timer_min = Label(canvas_timer, text ='')
+label_timer_min = Label(canvas_timer, text ='', font = font_clock_timer)
 label_timer_min.grid(row = 1, column = 3)
-label_timer_min_dot = Label(canvas_timer, text = ':')
+label_timer_min_dot = Label(canvas_timer, text = ':', font = font_clock_timer)
 label_timer_min_dot.grid(row = 1, column = 4)
 
 # this paragraph of code will contain the seconds part
-label_timer_sec = Label(canvas_timer, text = '')
+label_timer_sec = Label(canvas_timer, text = '', font = font_clock_timer)
 label_timer_sec.grid(row = 1, column = 5)
 # --------------------
 
